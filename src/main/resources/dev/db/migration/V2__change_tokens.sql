@@ -1,4 +1,4 @@
- -- add is_mobile column if not exists
+-- add is_mobile column if not exists
 SELECT COUNT(*)
 INTO @columnCount
 FROM INFORMATION_SCHEMA.COLUMNS

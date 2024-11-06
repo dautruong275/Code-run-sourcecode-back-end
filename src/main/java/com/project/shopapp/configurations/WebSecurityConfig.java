@@ -121,6 +121,8 @@ public class WebSecurityConfig {
                             .requestMatchers(DELETE,
                                     String.format("%s/order_details/**", apiPrefix)).hasRole(Role.ADMIN)
 
+                            .requestMatchers(POST,
+                                    String.format("%s/users/refreshToken", apiPrefix)).permitAll()
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 
