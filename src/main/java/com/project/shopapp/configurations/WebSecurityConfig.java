@@ -125,11 +125,6 @@ public class WebSecurityConfig {
                             .requestMatchers(POST,
                                     String.format("%s/users/refreshToken", apiPrefix)).permitAll()
 
-                            .requestMatchers(PUT,
-                                    String.format("%s/users/reset-password", apiPrefix)).permitAll()
-                            .requestMatchers(PUT,
-                                    String.format("%s/users/block", apiPrefix)).permitAll()
-
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 
