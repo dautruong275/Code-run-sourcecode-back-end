@@ -1,6 +1,6 @@
 #file: noinspection SpringBootApplicationYaml
 server:
-  port: 8088  
+  port: 8089
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3360/ShopApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
@@ -19,6 +19,9 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+  redis:
+      host: ${REDIS_HOST:localhost} # Default to 'localhost' if not provided
+      port: ${REDIS_PORT:6379}      # Default to 6379 if not provided
   messages:
     basename: i18n/messages
     encoding: UTF-8
@@ -29,6 +32,29 @@ jwt:
   expiration: 2592000 #30 days = 30 * 24 * 60 * 60
   secretKey: TaqlmGv1iEDMRiFp/pHuID1+T84IABfuA0xXh4GhiUI=
 
-logging.level.org.springframework.security: DEBUG
+logging:
+  level:
+    org:
+      springframework.security: DEBUG
+
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+  show-actuator: true
+
+#health check
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /api/v1/actuator
+      exposure:
+        #include: "health"
+        include: "health, info"
 
 
