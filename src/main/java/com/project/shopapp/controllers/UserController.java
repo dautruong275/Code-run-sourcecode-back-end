@@ -4,6 +4,7 @@ import com.project.shopapp.models.User;
 import com.project.shopapp.responses.LoginResponse;
 import com.project.shopapp.responses.RegisterResponse;
 import com.project.shopapp.responses.UserResponse;
+import com.project.shopapp.services.ITokenService;
 import com.project.shopapp.services.IUserService;
 import com.project.shopapp.components.LocalizationUtils;
 import com.project.shopapp.utils.MessageKeys;
@@ -28,6 +29,7 @@ import java.util.List;
 public class UserController {
     private final IUserService userService;
     private final LocalizationUtils localizationUtils;
+    private final ITokenService tokenService;
 
     @PostMapping("/register")
     //can we register an "admin" user ?
@@ -77,6 +79,7 @@ public class UserController {
             );
             String userAgent = request.getHeader("User-Agent");
             User user = userService.getUserDetailsFromToken(token);
+            tokenService.addToken(user, token, isMobileDevice(userAgent));
 
             // Trả về token trong response
             return ResponseEntity.ok(LoginResponse.builder()
