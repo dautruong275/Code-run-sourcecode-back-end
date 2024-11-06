@@ -4,6 +4,7 @@ import com.project.shopapp.filters.JwtTokenFilter;
 import com.project.shopapp.models.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -123,25 +124,18 @@ public class WebSecurityConfig {
 
                             .requestMatchers(POST,
                                     String.format("%s/users/refreshToken", apiPrefix)).permitAll()
+
+                            .requestMatchers(PUT,
+                                    String.format("%s/users/reset-password", apiPrefix)).permitAll()
+                            .requestMatchers(PUT,
+                                    String.format("%s/users/block", apiPrefix)).permitAll()
+
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 
                 })
                 .csrf(AbstractHttpConfigurer::disable);
-        /*http.cors(new Customizer<CorsConfigurer<HttpSecurity>>() {
-            @Override
-            public void customize(CorsConfigurer<HttpSecurity> httpSecurityCorsConfigurer) {
-                CorsConfiguration configuration = new CorsConfiguration();
-                configuration.setAllowedOrigins(List.of("*"));
-                configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-                configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
-                configuration.setExposedHeaders(List.of("x-auth-token"));
-                UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-                source.registerCorsConfiguration("/**", configuration);
-                httpSecurityCorsConfigurer.configurationSource(source);
-            }
-        });*/
-
+        http.securityMatcher(String.valueOf(EndpointRequest.toAnyEndpoint()));
         return http.build();
     }
 }
