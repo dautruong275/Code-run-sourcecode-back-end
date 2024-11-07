@@ -76,15 +76,17 @@ public class JwtTokenFilter extends OncePerRequestFilter{
         final List<Pair<String, String>> bypassTokens = Arrays.asList(
                 // Healthcheck request, no JWT token required
                 Pair.of(String.format("%s/healthcheck/health", apiPrefix), "GET"),
-                Pair.of(String.format("%s/actuator**", apiPrefix), "GET"),
+                Pair.of(String.format("%s/actuator/**", apiPrefix), "GET"),
 
                 Pair.of(String.format("%s/roles**", apiPrefix), "GET"),
+                Pair.of(String.format("%s/comments**", apiPrefix), "GET"),
+
                 Pair.of(String.format("%s/products**", apiPrefix), "GET"),
                 Pair.of(String.format("%s/categories**", apiPrefix), "GET"),
                 Pair.of(String.format("%s/users/register", apiPrefix), "POST"),
                 Pair.of(String.format("%s/users/login", apiPrefix), "POST"),
                 Pair.of(String.format("%s/users/refreshToken", apiPrefix), "POST"),
-                Pair.of(String.format("%s/comments", apiPrefix), "POST"),
+
                 // Swagger
                 Pair.of("/api-docs","GET"),
                 Pair.of("/api-docs/**","GET"),
@@ -100,12 +102,15 @@ public class JwtTokenFilter extends OncePerRequestFilter{
         String requestPath = request.getServletPath();
         String requestMethod = request.getMethod();
 
-        if (requestPath.equals(String.format("%s/orders", apiPrefix))
-                && requestMethod.equals("GET")) {
-            // Allow access to %s/orders
-            return true;
+        for (Pair<String, String> token : bypassTokens) {
+            String path = token.getFirst();
+            String method = token.getSecond();
+            // Check if the request path and method match any pair in the bypassTokens list
+            if (requestPath.matches(path.replace("**", ".*"))
+                    && requestMethod.equalsIgnoreCase(method)) {
+                return true;
+            }
         }
-
         for (Pair<String, String> bypassToken : bypassTokens) {
             if (requestPath.contains(bypassToken.getFirst())
                     && requestMethod.equals(bypassToken.getSecond())) {
