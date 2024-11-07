@@ -7,9 +7,12 @@ import com.project.shopapp.models.OrderDetail;
 import com.project.shopapp.responses.OrderDetailResponse;
 import com.project.shopapp.services.OrderDetailService;
 import com.project.shopapp.utils.MessageKeys;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -52,6 +55,8 @@ public class OrderDetailController {
         return ResponseEntity.ok(orderDetailResponses);
     }
     @PutMapping("/{id}")
+    @Operation(security = { @SecurityRequirement(name = "bearer-key") })
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<?> updateOrderDetail(
             @Valid @PathVariable("id") Long id,
             @RequestBody OrderDetailDTO orderDetailDTO) {
@@ -63,6 +68,8 @@ public class OrderDetailController {
         }
     }
     @DeleteMapping("/{id}")
+    @Operation(security = { @SecurityRequirement(name = "bearer-key") })
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<?> deleteOrderDetail(
             @Valid @PathVariable("id") Long id) {
         orderDetailService.deleteById(id);

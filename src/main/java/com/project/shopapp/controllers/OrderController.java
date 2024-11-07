@@ -65,6 +65,7 @@ public class OrderController {
         }
     }
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     //PUT http://localhost:8088/api/v1/orders/2
     //công việc của admin
     public ResponseEntity<?> updateOrder(
@@ -79,6 +80,7 @@ public class OrderController {
         }
     }
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> deleteOrder(@Valid @PathVariable Long id) {
         //xóa mềm => cập nhật trường active = false
         orderService.deleteOrder(id);

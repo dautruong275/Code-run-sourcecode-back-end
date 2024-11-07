@@ -47,6 +47,7 @@ public class WebSecurityConfig {
                                     String.format("%s/users/login", apiPrefix),
                                     //healthcheck
                                     String.format("%s/healthcheck/**", apiPrefix),
+                                    String.format("%s/actuator/**", apiPrefix),
                                     //swagger
                                     //"/v3/api-docs",
                                     //"/v3/api-docs/**",
@@ -124,6 +125,9 @@ public class WebSecurityConfig {
 
                             .requestMatchers(POST,
                                     String.format("%s/users/refreshToken", apiPrefix)).permitAll()
+
+                            .requestMatchers(POST,
+                                    String.format("%s/users/comments", apiPrefix)).permitAll()
 
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
