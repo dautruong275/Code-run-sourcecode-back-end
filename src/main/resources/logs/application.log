@@ -7038,3 +7038,424 @@ Security filter chain: no match
 
 
 2024-11-07 20:31:58.813 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-07 20:32:08.670 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-07 20:32:08.694 [main] INFO  c.project.shopapp.ShopappApplication - Starting ShopappApplication using Java 17.0.11 with PID 11660 (D:\CODE\JAVA\Udemy\CoderunSourcecode\shopapp-backend\target\classes started by PC in D:\CODE\JAVA\Udemy\CoderunSourcecode\shopapp-backend)
+2024-11-07 20:32:08.694 [main] INFO  c.project.shopapp.ShopappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-07 20:32:09.448 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-07 20:32:09.449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-07 20:32:09.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 11 JPA repository interfaces.
+2024-11-07 20:32:09.566 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-07 20:32:09.567 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-07 20:32:09.575 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.CommentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.CouponConditionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.CouponRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.OrderDetailRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.ProductImageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.579 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.TokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.579 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.shopapp.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-07 20:32:09.579 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2024-11-07 20:32:09.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+2024-11-07 20:32:10.003 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-07 20:32:10.004 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-07 20:32:10.004 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-11-07 20:32:10.074 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-07 20:32:10.074 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1355 ms
+2024-11-07 20:32:10.342 [main] INFO  o.f.c.i.s.classpath.ClassPathScanner - Flyway OSS Edition 10.1.0 by Redgate
+2024-11-07 20:32:10.342 [main] INFO  o.f.c.i.s.classpath.ClassPathScanner - 
+2024-11-07 20:32:10.342 [main] INFO  o.f.c.i.s.classpath.ClassPathScanner - See release notes here: https://rd.gt/416ObMi
+2024-11-07 20:32:10.356 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3360/ShopApp (MySQL 9.1)
+2024-11-07 20:32:10.363 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.1 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2024-11-07 20:32:10.396 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 6 migrations (execution time 00:00.026s)
+2024-11-07 20:32:10.406 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `shopapp`: 5
+2024-11-07 20:32:10.409 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `shopapp` is up to date. No migration necessary.
+2024-11-07 20:32:10.457 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-07 20:32:10.506 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-11-07 20:32:10.508 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-11-07 20:32:10.594 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-11-07 20:32:10.680 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-07 20:32:10.892 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-11-07 20:32:11.458 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-07 20:32:11.460 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-07 20:32:11.640 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-07 20:32:12.216 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/api/v1/actuator'
+2024-11-07 20:32:12.249 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-07 20:32:12.285 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CategoryController.createCategory(com.project.shopapp.dtos.CategoryDTO,org.springframework.validation.BindingResult)
+2024-11-07 20:32:12.286 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.CategoryController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CategoryController.createCategory(com.project.shopapp.dtos.CategoryDTO,org.springframework.validation.BindingResult)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.292 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CategoryController.deleteCategory(java.lang.Long)
+2024-11-07 20:32:12.293 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.CategoryController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CategoryController.deleteCategory(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.364 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CommentController.updateComment(java.lang.Long,com.project.shopapp.dtos.CommentDTO)
+2024-11-07 20:32:12.364 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.CommentController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CommentController.updateComment(java.lang.Long,com.project.shopapp.dtos.CommentDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.365 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CommentController.insertComment(com.project.shopapp.dtos.CommentDTO)
+2024-11-07 20:32:12.365 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.CommentController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.CommentController.insertComment(com.project.shopapp.dtos.CommentDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.467 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.deleteOrder(java.lang.Long)
+2024-11-07 20:32:12.468 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.OrderController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.deleteOrder(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.468 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.updateOrder(long,com.project.shopapp.dtos.OrderDTO)
+2024-11-07 20:32:12.468 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.OrderController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.updateOrder(long,com.project.shopapp.dtos.OrderDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.468 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.getOrdersByKeyword(java.lang.String,int,int)
+2024-11-07 20:32:12.469 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.OrderController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderController.getOrdersByKeyword(java.lang.String,int,int)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.476 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderDetailController.updateOrderDetail(java.lang.Long,com.project.shopapp.dtos.OrderDetailDTO)
+2024-11-07 20:32:12.476 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.OrderDetailController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderDetailController.updateOrderDetail(java.lang.Long,com.project.shopapp.dtos.OrderDetailDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.477 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderDetailController.deleteOrderDetail(java.lang.Long)
+2024-11-07 20:32:12.477 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.OrderDetailController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.OrderDetailController.deleteOrderDetail(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.550 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductController.updateProduct(long,com.project.shopapp.dtos.ProductDTO)
+2024-11-07 20:32:12.550 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductController.updateProduct(long,com.project.shopapp.dtos.ProductDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.551 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductController.deleteProduct(long)
+2024-11-07 20:32:12.551 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductController.deleteProduct(long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.557 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductImageController.delete(java.lang.Long)
+2024-11-07 20:32:12.558 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.ProductImageController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.ProductImageController.delete(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.608 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.resetPassword(long)
+2024-11-07 20:32:12.608 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.resetPassword(long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.608 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.getAllUser(java.lang.String,int,int)
+2024-11-07 20:32:12.608 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.getAllUser(java.lang.String,int,int)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.608 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.updateUserDetails(java.lang.Long,com.project.shopapp.dtos.UpdateUserDTO,java.lang.String)
+2024-11-07 20:32:12.609 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.updateUserDetails(java.lang.Long,com.project.shopapp.dtos.UpdateUserDTO,java.lang.String)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.609 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.getUserDetails(java.lang.String)
+2024-11-07 20:32:12.609 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.getUserDetails(java.lang.String)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.609 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.blockOrEnable(long,int)
+2024-11-07 20:32:12.609 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.shopapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.shopapp.controllers.UserController.blockOrEnable(long,int)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-11-07 20:32:12.726 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Or [Mvc [pattern='EndpointRequestMatcher includes=[*], excludes=[], includeLinks=true']] with [org.springframework.security.web.session.DisableEncodeUrlFilter@22587721, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17aadd1c, org.springframework.security.web.context.SecurityContextHolderFilter@10d60285, org.springframework.security.web.header.HeaderWriterFilter@22f8be7c, org.springframework.security.web.authentication.logout.LogoutFilter@787aa9f1, com.project.shopapp.filters.JwtTokenFilter@4c59c76c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f501ed0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456454e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c0e0ab9, org.springframework.security.web.access.ExceptionTranslationFilter@98a954a, org.springframework.security.web.access.intercept.AuthorizationFilter@694b818f]
+2024-11-07 20:32:12.731 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-11-07 20:32:13.043 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-07 20:32:13.055 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+2024-11-07 20:32:13.064 [main] INFO  c.project.shopapp.ShopappApplication - Started ShopappApplication in 4.588 seconds (process running for 5.035)
+2024-11-07 20:32:13.320 [RMI TCP Connection(2)-192.168.42.150] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-07 20:32:13.321 [RMI TCP Connection(2)-192.168.42.150] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-07 20:32:13.322 [RMI TCP Connection(2)-192.168.42.150] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-07 20:32:16.372 [http-nio-8089-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=HEAVAEN&totalAmount=201':
+
+org.apache.catalina.connector.RequestFacade@7e3f247f
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 5095f869-d76e-46b5-a2d3-546d3bfa01fc
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:35:19.754 [http-nio-8089-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=HEAVAEN&totalAmount=201':
+
+org.apache.catalina.connector.RequestFacade@e96c733
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 9847b151-e558-4465-aef6-f7e74246aa01
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:35:49.904 [http-nio-8089-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=DISCOUNT20&totalAmount=201':
+
+org.apache.catalina.connector.RequestFacade@4770dff9
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 76181b0b-ac92-40d5-92d2-284aa43e24ac
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:35:56.521 [http-nio-8089-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=HEAVEN&totalAmount=201':
+
+org.apache.catalina.connector.RequestFacade@6297fd34
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 348e9d3c-0b05-418d-887c-fe6dedd71e82
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:35:57.838 [http-nio-8089-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=HEAVEN&totalAmount=201':
+
+org.apache.catalina.connector.RequestFacade@19312bda
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 5e53333b-1826-4b9a-844e-8baf660e670e
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:36:03.113 [http-nio-8089-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=HEAVEN&totalAmount=2022':
+
+org.apache.catalina.connector.RequestFacade@3df495d4
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: ddc7ffc2-4ef3-4ffa-bc50-d1f20dc721c8
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:36:08.487 [http-nio-8089-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/coupons/calculate?couponCode=DISCOUNT20&totalAmount=2022':
+
+org.apache.catalina.connector.RequestFacade@f9d51ff
+
+servletPath:/api/v1/coupons/calculate
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjEyMzQ1Njc4OTAiLCJ1c2VySWQiOjcsInN1YiI6IjEyMzQ1Njc4OTAiLCJleHAiOjE3MzM1NjgzNzF9.GCcOUW2jE_xWUERH97_mNAosNgef7DOCYW04s_EzVKk
+user-agent: PostmanRuntime/7.42.0
+accept: */*
+cache-control: no-cache
+postman-token: 026b790d-b25f-4e3c-b146-74a585d8acbd
+host: localhost:8089
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:52:26.686 [http-nio-8089-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/swagger-ui/index.html':
+
+org.apache.catalina.connector.RequestFacade@4cc4ec34
+
+servletPath:/swagger-ui/index.html
+pathInfo:null
+headers: 
+host: localhost:8089
+connection: keep-alive
+cache-control: max-age=0
+sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br, zstd
+accept-language: en-US,en;q=0.9,vi-VN;q=0.8,vi;q=0.7
+cookie: pma_lang=en; pmaUser-1=vfO84IrzaoanPSJ2nkTWZe6l53OGfSWKXg8MpV7QF72qgMidKuoV%2BtC4%2B58%3D
+if-modified-since: Thu, 24 Oct 2024 12:08:33 GMT
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:52:26.723 [http-nio-8089-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/swagger-ui/swagger-initializer.js':
+
+org.apache.catalina.connector.RequestFacade@655ea7c4
+
+servletPath:/swagger-ui/swagger-initializer.js
+pathInfo:null
+headers: 
+host: localhost:8089
+connection: keep-alive
+sec-ch-ua-platform: "Windows"
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+sec-ch-ua-mobile: ?0
+accept: */*
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: script
+referer: http://localhost:8089/swagger-ui/index.html
+accept-encoding: gzip, deflate, br, zstd
+accept-language: en-US,en;q=0.9,vi-VN;q=0.8,vi;q=0.7
+cookie: pma_lang=en; pmaUser-1=vfO84IrzaoanPSJ2nkTWZe6l53OGfSWKXg8MpV7QF72qgMidKuoV%2BtC4%2B58%3D
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:52:26.870 [http-nio-8089-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api-docs/swagger-config':
+
+org.apache.catalina.connector.RequestFacade@26280de0
+
+servletPath:/api-docs/swagger-config
+pathInfo:null
+headers: 
+host: localhost:8089
+connection: keep-alive
+sec-ch-ua-platform: "Windows"
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+sec-ch-ua-mobile: ?0
+accept: */*
+sec-fetch-site: same-origin
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:8089/swagger-ui/index.html
+accept-encoding: gzip, deflate, br, zstd
+accept-language: en-US,en;q=0.9,vi-VN;q=0.8,vi;q=0.7
+cookie: pma_lang=en; pmaUser-1=vfO84IrzaoanPSJ2nkTWZe6l53OGfSWKXg8MpV7QF72qgMidKuoV%2BtC4%2B58%3D
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:52:27.017 [http-nio-8089-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api-docs':
+
+org.apache.catalina.connector.RequestFacade@1ff917ba
+
+servletPath:/api-docs
+pathInfo:null
+headers: 
+host: localhost:8089
+connection: keep-alive
+sec-ch-ua-platform: "Windows"
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+accept: application/json,*/*
+sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-fetch-site: same-origin
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:8089/swagger-ui/index.html
+accept-encoding: gzip, deflate, br, zstd
+accept-language: en-US,en;q=0.9,vi-VN;q=0.8,vi;q=0.7
+cookie: pma_lang=en; pmaUser-1=vfO84IrzaoanPSJ2nkTWZe6l53OGfSWKXg8MpV7QF72qgMidKuoV%2BtC4%2B58%3D
+
+
+Security filter chain: no match
+
+
+************************************************************
+
+
+2024-11-07 20:52:27.270 [http-nio-8089-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 249 ms
+2024-11-07 20:57:15.715 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
