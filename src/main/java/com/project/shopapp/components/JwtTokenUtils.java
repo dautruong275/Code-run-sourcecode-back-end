@@ -10,14 +10,11 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.security.SecureRandom;
-import java.security.SignatureException;
 import java.util.*;
 import java.util.function.Function;
 
@@ -37,13 +34,15 @@ public class JwtTokenUtils {
     public String generateToken(com.project.shopapp.models.User user) throws Exception{
         //properties => claims
         Map<String, Object> claims = new HashMap<>();
-        //this.generateSecretKey();
-        claims.put("phoneNumber", user.getPhoneNumber());
+        // Add subject identifier (phone number or email)
+        String subject = getSubject(user);
+        claims.put("subject", subject);
+        // Add user ID
         claims.put("userId", user.getId());
         try {
             String token = Jwts.builder()
                     .setClaims(claims) //how to extract claims from this ?
-                    .setSubject(user.getPhoneNumber())
+                    .setSubject(subject)
                     .setExpiration(new Date(System.currentTimeMillis() + expiration * 1000L))
                     .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                     .compact();
@@ -53,6 +52,15 @@ public class JwtTokenUtils {
             throw new InvalidParamException("Cannot create jwt token, error: "+e.getMessage());
             //return null;
         }
+    }
+    private static String getSubject(User user) {
+        // Determine subject identifier (phone number or email)
+        String subject = user.getPhoneNumber();
+        if (subject == null || subject.isBlank()) {
+            // If phone number is null or blank, use email as subject
+            subject = user.getEmail();
+        }
+        return subject;
     }
     private Key getSignInKey() {
         byte[] bytes = Decoders.BASE64.decode(secretKey);
@@ -82,12 +90,13 @@ public class JwtTokenUtils {
         Date expirationDate = this.extractClaim(token, Claims::getExpiration);
         return expirationDate.before(new Date());
     }
-    public String extractPhoneNumber(String token) {
-        return extractClaim(token, Claims::getSubject);
+    public String getSubject(String token) {
+        return  extractClaim(token, Claims::getSubject);
     }
     public boolean validateToken(String token, User userDetails) {
         try {
-            String phoneNumber = extractPhoneNumber(token);
+            String subject = extractClaim(token, Claims::getSubject);
+            //subject is phoneNumber or email
             Token existingToken = tokenRepository.findByToken(token);
             if(existingToken == null ||
                     existingToken.isRevoked() == true ||
@@ -95,7 +104,7 @@ public class JwtTokenUtils {
             ) {
                 return false;
             }
-            return (phoneNumber.equals(userDetails.getUsername()))
+            return (subject.equals(userDetails.getUsername()))
                     && !isTokenExpired(token);
         } catch (MalformedJwtException e) {
             logger.error("Invalid JWT token: {}", e.getMessage());

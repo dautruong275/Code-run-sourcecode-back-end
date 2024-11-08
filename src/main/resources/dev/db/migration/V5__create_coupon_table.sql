@@ -23,3 +23,4 @@ CREATE TABLE IF NOT EXISTS coupon_conditions (
   discount_amount DECIMAL(5, 2) NOT NULL,
   FOREIGN KEY (coupon_id) REFERENCES coupons(id)
 );
+

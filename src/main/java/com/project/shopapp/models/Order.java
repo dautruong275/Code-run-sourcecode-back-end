@@ -1,5 +1,6 @@
 package com.project.shopapp.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -41,7 +42,7 @@ public class Order {
     private String note;
 
     @Column(name="order_date")
-    private LocalDate orderDate;
+    private LocalDateTime orderDate;
 
     @Column(name = "status")
     private String status;
@@ -50,10 +51,10 @@ public class Order {
     private Float totalMoney;
 
     @Column(name = "shipping_method")
-    private String shippingMethod;
+    private String shippingMethod = "";
 
     @Column(name = "shipping_address")
-    private String shippingAddress;
+    private String shippingAddress = "";
 
     @Column(name = "shipping_date")
     private LocalDate shippingDate;
@@ -62,7 +63,7 @@ public class Order {
     private String trackingNumber;
 
     @Column(name = "payment_method")
-    private String paymentMethod;
+    private String paymentMethod = "";
 
     @Column(name = "active")
     private Boolean active;//thuộc về admin
@@ -70,4 +71,9 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
     private List<OrderDetail> orderDetails;
+
+    @ManyToOne
+    @JoinColumn(name = "coupon_id", nullable = true)
+    @JsonBackReference
+    private Coupon coupon = null;
 }

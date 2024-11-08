@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.shopapp.responses.product.ProductResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -27,16 +28,12 @@ public class ProductRedisService implements IProductRedisService {
                 .getDirection() == Sort.Direction.ASC ? "asc": "desc";
         String key = String.format("all_products:%d:%d:%s", pageNumber, pageSize, sortDirection);
         return key;
-        /*
-        {
-            "all_products:1:10:asc": "list of products object"
-        }
-        * */
     }
     @Override
     public List<ProductResponse> getAllProducts(String keyword,
                                                 Long categoryId,
                                                 PageRequest pageRequest) throws JsonProcessingException {
+
 
         String key = this.getKeyFrom(keyword, categoryId, pageRequest);
         String json = (String) redisTemplate.opsForValue().get(key);

@@ -57,6 +57,7 @@ public class UserService implements IUserService{
         User newUser = User.builder()
                 .fullName(userDTO.getFullName())
                 .phoneNumber(userDTO.getPhoneNumber())
+                .email(userDTO.getEmail())
                 .password(userDTO.getPassword())
                 .address(userDTO.getAddress())
                 .dateOfBirth(userDTO.getDateOfBirth())
@@ -167,8 +168,8 @@ public class UserService implements IUserService{
         if(jwtTokenUtil.isTokenExpired(token)) {
             throw new ExpiredTokenException("Token is expired");
         }
-        String phoneNumber = jwtTokenUtil.extractPhoneNumber(token);
-        Optional<User> user = userRepository.findByPhoneNumber(phoneNumber);
+        String subject = jwtTokenUtil.getSubject(token);
+        Optional<User> user = userRepository.findByPhoneNumber(subject);
 
         if (user.isPresent()) {
             return user.get();

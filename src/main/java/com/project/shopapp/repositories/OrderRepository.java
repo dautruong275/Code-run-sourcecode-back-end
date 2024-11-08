@@ -17,7 +17,8 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
             "o.fullName LIKE %:keyword% " +
             "OR o.address LIKE %:keyword% " +
             "OR o.note LIKE %:keyword% " +
-            "OR o.email LIKE %:keyword%)")
+            "OR o.email LIKE %:keyword%) " +
+            "ORDER BY o.orderDate DESC")
     Page<Order> findByKeyword(@Param("keyword") String keyword, Pageable pageable);
 }
 /*

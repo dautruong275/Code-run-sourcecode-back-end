@@ -1,15 +1,13 @@
 package com.project.shopapp.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "users")
@@ -18,6 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+/*
+ALTER TABLE users ADD profile_image VARCHAR(255) DEFAULT '';
+* */
 public class User extends BaseEntity implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +27,12 @@ public class User extends BaseEntity implements UserDetails {
     @Column(name = "fullname", length = 100)
     private String fullName;
 
-    @Column(name = "phone_number", length = 10, nullable = false)
+    @Column(name = "phone_number", length = 10, nullable = true)
     private String phoneNumber;
+
+    // ALTER TABLE users ADD COLUMN email VARCHAR(255) DEFAULT '';
+    @Column(name = "email", length = 255, nullable = true)
+    private String email;
 
     @Column(name = "address", length = 200)
     private String address;
@@ -61,8 +66,14 @@ public class User extends BaseEntity implements UserDetails {
     }
     @Override
     public String getUsername() {
-        return phoneNumber;
+        if (phoneNumber != null && !phoneNumber.isEmpty()) {
+            return phoneNumber;
+        } else if (email != null && !email.isEmpty()) {
+            return email;
+        }
+        return "";
     }
+
 
     @Override
     public boolean isAccountNonExpired() {
@@ -83,4 +94,6 @@ public class User extends BaseEntity implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }
+
